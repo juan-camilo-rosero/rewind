@@ -3,7 +3,7 @@ import { useState } from "react";
 import { RiGoogleFill } from "react-icons/ri";
 import { AuthContext } from "../context/AuthContext"
 import { db } from "../firebase/firebase.config";
-import { collection, setDoc, doc } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { SectionContext } from "../context/SectionContext";
 
 

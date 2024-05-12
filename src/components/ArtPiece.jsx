@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { PiecesContext } from '../context/PiecesContext'
 import { SectionContext } from '../context/SectionContext'
 

@@ -4,28 +4,11 @@ import { PiecesContext } from '../context/PiecesContext';
 function Map() {
     const {pieces, actualPiece} = useContext(PiecesContext);
 
-    // Function to download the reward image
-    const downloadReward = () => {
-        // Create a temporary link for download
-        const link = document.createElement('a');
-        link.href = 'REWARD_IMAGE_URL'; // Replace 'REWARD_IMAGE_URL' with the URL of the reward image (reward.png)
-        link.download = 'reward.png'; // Set the download name
-
-        // Add the temporary link to the document
-        document.body.appendChild(link);
-
-        // Simulate click on the link
-        link.click();
-
-        // Remove the temporary link from the document
-        document.body.removeChild(link);
-    };
-
     return (
         (Object.keys(pieces).length === actualPiece)
         ? <div className="flex flex-col gap-12 items-center justify-center w-full h-[90vh]">
             <h2 className="text-4xl text-black font-semibold w-[70vw] text-center">Congratulations, you finished!!!</h2>
-            <button onClick={downloadReward} className="w-[70vw] py-2 bg-black text-2xl text-gray-100 font-semibold">Receive reward</button>
+            <a href='reward.png' download='reward.png' title="reward" className="w-[70vw] py-2 bg-black text-2xl text-gray-100 font-semibold text-center">Receive reward</a>
         </div>
         : <section className={`relative flex flex-col items-center pt-10 min-h-[92.5vh] lg:min-h-[90vh] bg-cover overflow-y-scroll pb-[10vh] lg:pl-[20vw] lg:items-start lg:pt-14`} style={{ backgroundImage: `url(${pieces[actualPiece].bg_img})` || "#" }}>
             <div className="absolute inset-0 bg-black opacity-80 z-0"></div>

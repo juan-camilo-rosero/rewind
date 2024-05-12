@@ -10,7 +10,7 @@ function Path() {
     console.log(Object.keys(pieces).length);
 
     return (
-        <section className='w-full flex flex-col items-center pb-10 bg-gray-700'>
+        <section className='w-full flex flex-col items-center mb-12'>
             {Object.keys(pieces).map((piece, index) => {
                 if (actualPiece > index) {
                     const pieceData = pieces[piece]

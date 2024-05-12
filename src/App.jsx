@@ -1,4 +1,4 @@
-import { PiecesContext, PiecesContextProvider } from './context/PiecesContext'
+import { PiecesContext } from './context/PiecesContext'
 import Header from './components/Header'
 import Nav from './components/Nav'
 import Main from './components/Main'
@@ -30,7 +30,7 @@ function App() {
             if (userSnap.exists()) {
                 const userData = userSnap.data();
                 setActualPiece(userData.actual_piece)
-                const pieces = await updatePieces((userData.actual_piece == 0) ? 0 : userData.actual_piece - 1)
+                const pieces = await updatePieces(userData.actual_piece - 1)
                 if(piece) setSection("art_piece")
                 if(userCode) await newPiece(userCode, userData.actual_piece, pieces, user.email)
                 setLoading(false)

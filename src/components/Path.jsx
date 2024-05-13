@@ -6,9 +6,6 @@ function Path() {
     const { setSection } = useContext(SectionContext)
     const { pieces, actualPiece } = useContext(PiecesContext)
 
-    console.log(actualPiece);
-    console.log(Object.keys(pieces).length);
-
     return (
         <section className='w-full flex flex-col items-center mb-[7.5vh] lg:mb-0 bg-black'>
             {Object.keys(pieces).map((piece, index) => {

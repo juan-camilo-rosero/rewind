@@ -37,18 +37,21 @@ function ArtPiece() {
         <h2 className='text-2xl font-semibold text-center w-[70vw] md:w-3/5 md:text-left md:text-4xl lg:w-2/5'>{title || "Title uwu"}</h2>
         <span className='text-lg font-semibold text-center w-[70vw] text-gray-600 -mt-4 md:w-3/5 md:text-left md:text-xl lg:w-2/5'>{author}</span>
         <div className='w-[70vw] mt-6 md:w-3/5 lg:w-2/5'>
-          <button className='w-10 h-10 bg-black text-gray-100 flex justify-center items-center left-4' onClick={
-            () => {
-              (speaking)
-              ? pause()
-              : sayLoud()
-            }
-            }>
-            {(speaking)
-            ? <RiPauseMiniLine/>
-            : <RiVolumeUpFill/>
-            }
-          </button>
+        {(title === "You have to visit the art piece")
+          ? null
+          : <button className='w-10 h-10 bg-black text-gray-100 flex justify-center items-center left-4' onClick={
+              () => {
+                (speaking)
+                ? pause()
+                : sayLoud()
+              }
+              }>
+              {(speaking)
+              ? <RiPauseMiniLine/>
+              : <RiVolumeUpFill/>
+              }
+            </button>
+        }
         </div>
         <p className='w-[70vw] text-xl leading-9 text-justify md:w-3/5 lg:w-2/5'>{content}</p>
         {(title === "You have to visit the art piece")

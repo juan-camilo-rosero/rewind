@@ -8,7 +8,7 @@ export function SectionContextProvider(props) {
     const [section, setSection] = useState("information")
     const [main, setMain] = useState(true)
     const [loading, setLoading] = useState(true)
-    const [chat, setChat] = useState(true)
+    const [chat, setChat] = useState(false)
 
     return (
         <SectionContext.Provider value={{

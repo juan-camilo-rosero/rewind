@@ -34,10 +34,10 @@ function SignUp() {
     }
 
   return (
-    <div className="pt-[7.5vh] w-full h-screen bg-black bg-cover flex flex-col items-center justify-center gap-12" style={{ backgroundImage: `url(bg.png)`}}>
-        <h1 className="text-gray-100 text-3xl font-semibold w-[70vw]">It seems that you are not loged in...</h1>
-        <div className="w-[70vw]">
-            <form className="flex flex-col gap-8" onSubmit={e => {
+    <div className="pt-[7.5vh] w-full h-screen bg-black md:flex-row bg-cover flex flex-col items-center justify-center gap-12" style={{ backgroundImage: `url(bg.png)`}}>
+        <h1 className="text-gray-100 text-3xl font-semibold w-[70vw] md:w-1/2 lg:px-20 lg:text-5xl">It seems that you are not loged in...</h1>
+        <div className="w-[70vw] md:w-1/2 lg:px-16 lg:w-1/3">
+            <form className="flex flex-col gap-8 lg:gap-8" onSubmit={e => {
                 setLoading(true)
                 e.preventDefault()
                 handleCreateAccount()
@@ -46,7 +46,7 @@ function SignUp() {
                 <input className="w-full px-4 py-2 text-xl bg-black bg-opacity-5 backdrop-blur-md text-gray-100 border-b-[3px] border-gray-100 outline-none focus:bg-opacity-35" type="password" placeholder='password' onChange={e => setPassword(e.target.value)} value={password}/>
                 <button className="w-full px-4 py-2 bg-gray-100 bg-opacity-60 backdrop-blur-md text-xl text-black font-semibold transition-all hover:bg-opacity-100 disabled:bg-opacity-30" type="submit" disabled = {loading}>{(loading) ? "loading..." : "continue"}</button>
             </form>
-            <div className="flex w-[70vw] justify-between my-10 items-center">
+            <div className="flex w-[70vw] justify-between my-10 lg:my-6 items-center md:w-full">
                 <div className="bg-gray-100 w-2/5 h-[2px]"/>
                 <p className="text-xl text-gray-100">or</p>
                 <div className="bg-gray-100 w-2/5 h-[2px]"/>

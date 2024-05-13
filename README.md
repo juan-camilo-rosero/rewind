@@ -1,4 +1,4 @@
-![](https://rewind-hackathon.vercel.app/logo_rewind.png){width='250px'}
+![](https://rewind-hackathon.vercel.app/logo_rewind.png)
 
 ## 🖌️ Rewind 🖌️
 

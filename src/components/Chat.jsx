@@ -69,7 +69,7 @@ function Chat() {
     
     
   return (
-    <div className={`w-full pt-24 pb-[15vh] h-[70vh] fixed ${(chat) ? "bottom-0" : "-bottom-[150vh]"} bg-gray-100 border-t-2 border-black backdrop-blur-md bg-opacity-60 transition-all flex items-center flex-col lg:w-[25vw] lg:right-0 lg:pb-8 lg:border-l-2 lg:pt-14`}>
+    <div className={`w-full pt-14 pb-[15vh] h-[70vh] fixed ${(chat) ? "bottom-0" : "-bottom-[150vh]"} bg-gray-100 border-t-2 border-black backdrop-blur-md bg-opacity-60 transition-all flex items-center flex-col lg:w-[25vw] lg:right-0 lg:pb-8 lg:border-l-2 lg:pt-14`}>
         <button className="absolute right-0 top-0 bg-black w-16 h-16 flex items-center justify-center text-gray-100 text-2xl lg:w-12 lg:h-12" onClick={() => setChat(false)}>
             <RiCloseLine/>
         </button>
@@ -87,8 +87,8 @@ function Chat() {
             }
         </div>
 
-        <input type="text" className="w-[85vw] border-2 border-black fixed bottom-[12vh] py-2 pl-4 pr-16 bg-gray-100 bg-opacity-40 backdrop-blur-md text-xl focus:outline-none font-semibold disabled:bg-gray-300 disabled:border-opacity-50 lg:w-4/5 lg:bottom-8 lg:text-sm lg:pr-14" disabled={!userTurn} onChange={e => setMessage(e.target.value)} value={message}/>
-        <button className="fixed bottom-[12vh] py-2 text-3xl w-14 bg-black text-gray-100 right-[7.5vw] flex justify-center items-center disabled:opacity-70 lg:bottom-8 lg:right-[2.5vw] lg:text-2xl lg:w-12" disabled={!userTurn} onClick={handleSend}>
+        <input type="text" className="w-[85vw] border-2 border-black fixed bottom-[12vh] py-2 pl-4 pr-16 bg-gray-100 bg-opacity-40 backdrop-blur-md text-md focus:outline-none font-semibold disabled:bg-gray-300 disabled:border-opacity-50 lg:w-4/5 lg:bottom-8 lg:pr-14 lg:text-sm" disabled={!userTurn} onChange={e => setMessage(e.target.value)} value={message}/>
+        <button className="fixed bottom-[12vh] py-[10px] text-2xl w-14 bg-black text-gray-100 right-[7.5vw] flex justify-center items-center disabled:opacity-70 lg:bottom-8 lg:right-[2.5vw] lg:text-2xl lg:w-12" disabled={!userTurn} onClick={handleSend}>
             <RiSendPlaneFill/>
         </button>
     </div>

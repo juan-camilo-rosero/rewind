@@ -11,7 +11,7 @@ To deploy the Rewind web application locally, follow these steps:
 1. **Clone the Repository:**
 
 ```bash
-git clone https://github.com/your-username/rewind.git
+git clone https://github.com/juan-camilo-rosero/rewind.git
 ```
 
 Replace your-username with your GitHub username if you've forked the repository.

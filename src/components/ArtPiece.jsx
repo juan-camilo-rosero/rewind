@@ -6,7 +6,7 @@ import Chat from './Chat';
 
 function ArtPiece() {
     const {title, content, author, img} = useContext(PiecesContext)
-    const {setSection, chat, setChat} = useContext(SectionContext)
+    const {setSection, setChat} = useContext(SectionContext)
     const [speaking, setSpeaking] = useState(false)
 
     const sayLoud = e => {
@@ -51,7 +51,10 @@ function ArtPiece() {
           </button>
         </div>
         <p className='w-[70vw] text-xl leading-9 text-justify md:w-3/5 lg:w-2/5'>{content}</p>
-        <button className='w-[70vw] mt-4 py-2 bg-gray-100 border-2 border-black transition-all hover:bg-black hover:text-gray-100 text-black text-xl font-semibold md:text-2xl md:w-3/5 md:mt-12 md:px-12 lg:w-auto lg:px-16 lg:py-2' onClick={() => setChat(true)}>any question?</button>
+        {(title === "You have to visit the art piece")
+          ? null
+          : <button className='w-[70vw] mt-4 py-2 bg-gray-100 border-2 border-black transition-all hover:bg-black hover:text-gray-100 text-black text-xl font-semibold md:text-2xl md:w-3/5 md:mt-12 md:px-12 lg:w-auto lg:px-16 lg:py-2' onClick={() => setChat(true)}>any question?</button>
+        }
         <button className='w-[70vw] mb-8 py-2 bg-black border-2 transition-all text-gray-100 text-xl font-semibold md:text-2xl md:w-3/5 lg:w-auto lg:px-16 lg:py-2' onClick={() => setSection("map")}>continue</button>
     </section>
   )
